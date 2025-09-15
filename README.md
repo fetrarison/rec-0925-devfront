@@ -1,46 +1,19 @@
 # Test technique — Dev Front
 
-## Objectif
-Reproduire fidèlement l’interface fournie (**Adobe XD**) **au pixel près**.  
-En cas d’incohérence visuelle, ajustez pour obtenir une **vue harmonisée** (alignements, hiérarchie visuelle, rythme vertical) et **documentez** vos arbitrages dans le README (section « Notes de design »).
 
-🔗 **Maquettes** : https://xd.adobe.com/view/47f5bba9-a512-492c-85c6-d4fc4ddebc60-12a6/
+## Description
+Ce projet contient deux fichiers HTML créés dans le dossier `public/Maquette`.
 
----
+## Instructions de lancement
+Pour exécuter les fichiers, il suffit de faire un clic droit sur l'un des fichiers HTML et de sélectionner l'option **"Reveal in File Explorer"**. Ensuite, vous pouvez ouvrir le fichier dans votre navigateur préféré.
 
-## Stack & périmètre
-- Réaliser les pages **en HTML et Tailwind CSS uniquement** (Tailwind est **déjà installé**).
-- **Aucune autre dépendance** ne devra être installée.
-- Ces pages sont **statiques** : **aucun besoin de base de données**.
+## Notes de design
+- Certaines icônes présentes sur la maquette ont été remplacées par d'autres, car je n'ai pas trouvé la source originale des icônes.
+- J'ai ajouté quelques animations simples pour apporter un design plus moderne à l'ensemble.
 
----
 
-## Modalités de dépôt
-- Travaillez **uniquement sur un fork GitHub** de notre dépôt.
-- **Aucune branche** ne devra être créée : utilisez la **branche principale** de votre fork.
+## Temps passé (indicatif)
+- Configuration initiale : 20 min
+- Développement des fonctionnalités : 5h
+- Vérifications de pixel perfect : 1h
 
----
-
-## Routing requis (personnalisé par candidat)
-Les URL doivent être personnalisées par candidat selon le format :  
-`/{nom-de-famille}-{slug-de-la-page}`
-
-**Règles :**
-- **nom-de-famille** : en minuscules, accents supprimés, espaces → « - ».  
-  *Ex.* « Dupré-Lefèvre » → `dupre-lefevre`.
-- **slug-de-la-page** : en minuscules, accents supprimés, espaces → « - » ; caractères autorisés : `a–z`, `0–9`, `-`.  
-  Utiliser **un seul tiret** entre les segments ; **aucun tiret** en début/fin.
-
-**Exemple avec le candidat *Dumoulin Adrien***
-- Page 1 : `/dumoulin-completez-votre-reservation`
-- Page 2 : `/dumoulin-paiement`
-
----
-
-## Livrables attendus
-- Lien GitHub de votre **fork public** (historique de commits propre et régulier).
-- **README** à la racine incluant :
-    - **Instructions de lancement/build** si différentes du projet de base.
-    - Section **« Notes de design »** : incohérences rencontrées, arbitrages, fallback de police si nécessaire.
-- *(Optionnel)* **Captures comparatives** montrant vos vérifications de pixel perfect.
-- **Temps passé** (indicatif).
