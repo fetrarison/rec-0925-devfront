@@ -7,7 +7,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+  
   <style>
     .card-accent {
       -webkit-tap-highlight-color: transparent;
@@ -39,7 +39,9 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 items-stretch">
 
-      <article class="bg-white rounded-[37px] border-4 border-gray-300 text-center overflow-hidden flex flex-col card-accent transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+      <!-- Basic Card -->
+      <article class="bg-white rounded-[37px] border-4 border-gray-300 text-center overflow-hidden flex flex-col card-accent transition-transform transform hover:-translate-y-1 hover:shadow-lg"
+        style="background: #FFFFFF 0% 0% no-repeat padding-box; box-shadow: 0px 3px 6px #00000029; border-radius: 37px; opacity: 1;">
         <header class="bg-gray-100 text-gray-800 px-4 py-6">
           <h3 class="text-lg font-semibold">Basic</h3>
           <p class="text-sm">Votre test psychotechnique simple</p>
@@ -49,28 +51,33 @@
           <div class="text-3xl font-bold text-black">+ 0€</div>
           <div class="text-xs text-gray-500 mt-1 mb-4">Version de base</div>
 
-          <button class="w-48 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-md mb-4 shadow-sm">
+          <button class="w-48 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-2 px-4 rounded-md mb-4 shadow-sm flex items-center justify-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-gray-600 flex items-center justify-center">
+              <i class="fas fa-check text-white text-xs"></i>
+            </span>
             Sélectionner
           </button>
         </div>
 
         <div class="border-t border-gray-100 px-6 py-6 text-left space-y-3 text-sm">
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-gray-600 mt-1"></i>
+            <i class="fas fa-hand-holding-heart text-gray-600 mt-1"></i>
             <span>Entraînement illimité et gratuit</span>
           </div>
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-gray-600 mt-1"></i>
+            <i class="fas fa-calendar-alt text-gray-600 mt-1"></i>
             <span>Annulation jusqu'à 48 heures</span>
           </div>
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-gray-600 mt-1"></i>
+            <i class="fas fa-book text-gray-600 mt-1"></i>
             <span>Recevez votre test le jour J</span>
           </div>
         </div>
       </article>
-      <article class="bg-white rounded-[37px] border-4 border-green-600 text-center overflow-hidden flex flex-col card-accent transition-transform transform hover:-translate-y-1 hover:shadow-lg">
-        <header class="bg-green-500 text-white px-4 py-6">
+
+      <article class="bg-white rounded-[37px] border-4 border-[#0DBC0D] text-center overflow-hidden flex flex-col card-accent transition-transform transform hover:-translate-y-1 hover:shadow-lg"
+        style="background: #FFFFFF 0% 0% no-repeat padding-box; box-shadow: 0px 3px 6px #00000029; border: 4px solid #0DBC0D; border-radius: 37px; opacity: 1;">
+        <header class="bg-[#0DBC0D] text-white px-4 py-6">
           <h3 class="text-lg font-semibold">Assurance</h3>
           <p class="text-sm">Votre test psychotechnique sans stress</p>
         </header>
@@ -79,36 +86,40 @@
           <div class="text-3xl font-bold text-black">+ 40€</div>
           <div class="text-xs text-gray-500 mt-1 mb-4">À peine le prix d'un resto</div>
 
-          <button class="w-48 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md mb-4 shadow">
-            <i class="fas fa-check mr-2"></i> Sélectionner
+          <button class="w-48 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md mb-4 shadow flex items-center justify-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-white flex items-center justify-center">
+              <i class="fas fa-check text-green-600 text-xs"></i>
+            </span>
+            Sélectionner
           </button>
         </div>
 
         <div class="border-t border-gray-100 px-6 py-6 text-left space-y-3 text-sm">
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-green-600 mt-1"></i>
+            <i class="fas fa-hand-holding-heart text-green-600 mt-1"></i>
             <span>Entraînement illimité et gratuit</span>
           </div>
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-green-600 mt-1"></i>
+            <i class="fas fa-calendar-alt text-green-600 mt-1"></i>
             <span>Annulation jusqu'à 48 heures</span>
           </div>
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-green-600 mt-1"></i>
+            <i class="fas fa-check-circle text-green-600 mt-1"></i>
             <span>Repassez votre test pour 0€ (si test échoué)</span>
           </div>
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-green-600 mt-1"></i>
+            <i class="fas fa-book text-green-600 mt-1"></i>
             <span>Recevez votre test le jour J</span>
           </div>
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-green-600 mt-1"></i>
+            <i class="fas fa-book text-green-600 mt-1"></i>
             <span>Livret de préparation au test psychotechnique</span>
           </div>
         </div>
       </article>
 
-      <article class="bg-white rounded-[37px] border-4 border-blue-600 text-center overflow-hidden flex flex-col card-accent transition-transform transform hover:-translate-y-1 hover:shadow-lg">
+      <article class="bg-white rounded-[37px] border-2 border-blue-600 text-center overflow-hidden flex flex-col card-accent transition-transform transform hover:-translate-y-1 hover:shadow-lg"
+        style="background: #FFFFFF 0% 0% no-repeat padding-box; box-shadow: 0px 3px 6px #00000029; border-radius: 37px; opacity: 1;">
         <header class="bg-blue-600 text-white px-4 py-6">
           <h3 class="text-lg font-semibold">Complet</h3>
           <p class="text-sm">Votre test psychotechnique tout compris</p>
@@ -118,42 +129,45 @@
           <div class="text-3xl font-bold text-black">+ 60€</div>
           <div class="text-xs text-gray-500 mt-1 mb-4">À peine le prix de 4 pizzas</div>
 
-          <button class="w-48 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md mb-4 shadow">
-            <i class="fas fa-check mr-2"></i> Sélectionner
+          <button class="w-48 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md mb-4 shadow flex items-center justify-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-white flex items-center justify-center">
+              <i class="fas fa-check text-blue-600 text-xs"></i>
+            </span>
+            Sélectionner
           </button>
         </div>
 
         <div class="border-t border-gray-100 px-6 py-6 text-left space-y-3 text-sm">
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-blue-600 mt-1"></i>
+            <i class="fas fa-hand-holding-heart text-blue-600 mt-1"></i>
             <span>Entraînement illimité et gratuit</span>
           </div>
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-blue-600 mt-1"></i>
+            <i class="fas fa-calendar-alt text-blue-600 mt-1"></i>
             <span>Annulation jusqu'à 24 heures</span>
           </div>
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-blue-600 mt-1"></i>
+            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
             <span>Repassez votre test pour 0€ (si test échoué)</span>
           </div>
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-blue-600 mt-1"></i>
+            <i class="fas fa-book text-blue-600 mt-1"></i>
             <span>Recevez votre test le jour J</span>
           </div>
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-blue-600 mt-1"></i>
+            <i class="fas fa-book text-blue-600 mt-1"></i>
             <span>Livret de préparation au test psychotechnique</span>
           </div>
           <div class="flex items-start gap-3">
-            <i class="fas fa-check text-blue-600 mt-1"></i>
+            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
             <span>Téléchargez vos résultats en illimité</span>
           </div>
         </div>
       </article>
+
     </div>
   </main>
 
-  <!-- Footer -->
   <div class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4">
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-4">
