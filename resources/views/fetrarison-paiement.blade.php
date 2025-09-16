@@ -13,7 +13,8 @@
         <div class="max-w-6xl mx-auto px-4 py-4">
             <div class="flex items-center gap-3">
                 <!-- Nouveau logo -->
-                <img src="img/logo.png" alt="Logo AAAEP" class="h-12">
+                <a href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" alt="Logo AAAEP" class="h-12"></a>
+
             </div>
         </div>
     </div>
