@@ -1,32 +1,29 @@
 <?php
-
-// Fonction pour transformer une chaîne de texte en un format conforme (minuscules, accents supprimés, espaces → tirets)
 function formatUrl($string) {
-    $string = strtolower($string); // Convertir en minuscules
-    $string = preg_replace('~[^a-z0-9 -]~', '', $string); // Supprimer les caractères non autorisés
-    $string = preg_replace('~[ -]+~', '-', $string); // Remplacer espaces et tirets multiples par un seul tiret
+    $string = strtolower($string);
+    $string = iconv('UTF-8', 'ASCII//TRANSLIT', $string);
+    $string = preg_replace('~[^a-z0-9-]+~', '-', $string);
+    $string = trim($string, '-');
     return $string;
 }
 
-// Récupérer l'URL
 $requestUri = $_SERVER['REQUEST_URI'];
+$basePath = '/rec-0925-devfront/public';
+$path = str_replace($basePath, '', $requestUri);
+$path = trim($path, '/');
 
-// Extrait le nom de famille et le slug à partir de l'URL
-$segments = explode('/', trim($requestUri, '/'));
-$candidateName = $segments[0]; // Nom de famille
-$pageSlug = isset($segments[1]) ? $segments[1] : ''; // Slug de la page
+$segments = explode('/', $path);
+$candidateName = $segments[0] ?? '';
+$pageSlug = $segments[1] ?? '';
 
-// Transforme le nom de famille et le slug pour correspondre au format
-$candidateNameFormatted = formatUrl($candidateName);
-$pageSlugFormatted = formatUrl($pageSlug);
+$candidateName = formatUrl($candidateName);
+$pageSlug = formatUrl($pageSlug);
 
-// Vérifier et inclure la bonne page HTML
-if ($candidateNameFormatted === 'fetrarison' && $pageSlugFormatted === 'completez-votre-reservation') {
+if ($candidateName === 'fetrarison' && $pageSlug === 'completez-votre-reservation') {
     include('fetrarison-completez-votre-reservation.html');
-} elseif ($candidateNameFormatted === 'fetrarison' && $pageSlugFormatted === 'paiement') {
+} elseif ($candidateName === 'fetrarison' && $pageSlug === 'paiement') {
     include('fetrarison-paiement.html');
 } else {
-    // Page par défaut ou page 404 si l'URL n'est pas reconnue
-    echo "Page non trouvée.";
+    http_response_code(404);
+    echo "<h1>404 - Page non trouvée</h1>";
 }
-?>
